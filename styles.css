@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "customFont";
+    src: url("./Rubik-VariableFont_wght.ttf");
+}
+
+:root{
+    border: 1px solid rgba(255, 0, 0, 0.438);
+    font-family: customFont;
+    color: #414141;
+}
+
+.content{
+    
+}
+
+.my-name{
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+  }
+
+  .loading-bar {
+    width: 300px;
+    height: 2px;
+    background-color: #888888;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress {
+    height: 100%;
+    background-color: #fff;
+    width: 120%; 
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    animation: progressAnimation 4s ease-in-out infinite;
+  }
+
+  @keyframes progressAnimation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  } */
