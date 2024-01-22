@@ -3,16 +3,75 @@
     src: url("./Rubik-VariableFont_wght.ttf");
 }
 
-:root{
-    border: 1px solid rgba(255, 0, 0, 0.438);
+*{
+    /* border: 1px solid rgba(255, 0, 0, 0.438); */
     font-family: customFont;
-    color: #414141;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: #414141; */
+    /* color: #5995DA;    Blue */
+
 }
 
-.content{
-    
+body{
+  color: #5d6063;
+  background-color: #fff;
+  min-width: 320px;
+  font-size: 18px;
+  display: block;
+}
+a {
+  text-decoration: none;
 }
 
+.section{
+  max-width: 1200px;
+}
+
+#content{
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  place-items: center;
+}
+
+nav{
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+}
+nav ul{
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+.logo{
+  margin-right: auto;
+}
+.menu-icon{
+  display: none;
+}
+@media only screen and (max-width:600px){
+  .menu-icon{
+    display: unset;
+  }
+  nav ul{
+    display: none;
+  }
+}
+
+.Hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-pp{
+
+}
 .my-name{
     font-weight: 400;
     font-size: 4rem;
