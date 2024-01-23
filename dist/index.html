@@ -10,8 +10,9 @@
     </head>
     <body>
         <div id="content">
-            <nav class="section">
-                <a href="#" class="logo"><img src="./user-pp.png" alt="icon" width="50px"></a>
+
+            <nav class="navbar">
+                <a href="#" class="my-logo" ><img class="logo" src="./user-pp.png" alt="icon" width="50px"></a>
                 <ul>
                     <li><a href="#" class="link">item 1</a></li>
                     <li><a href="#" class="link">item 2</a></li>
@@ -20,16 +21,36 @@
                 </ul>
                 <a href="#" class="menu-icon"><img src="./menu.svg" alt="icon" width="30px"></a>
             </nav>
+            <script>
+                // add class navbarDark on navbar scroll
+                const header = document.querySelector('.navbar');
+
+                window.onscroll = function() {
+                    var top = window.scrollY;
+                    if(top >=100) {
+                        header.classList.add('navbarDark');
+                    }
+                    else {
+                        header.classList.remove('navbarDark');
+                    }
+                }
+            </script>
+
+
             <div class="Hero section">
                 <img class="my-pp" src="./user-pp.png" alt="myPhoto" width="300px" height="300px">
-                <p class="my-name">CHANDAN K P</p>
+                <p class="my-name">CHANDAN <span class="my-name">K P</span> </p>
             </div>
+
+
             <div class="AboutMe section">
-                <p>About Me : </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita molestias debitis dolore non blanditiis voluptatum vero sit ab adipisci quibusdam quam nam eligendi repellendus, quos dolorum. Numquam magnam iure laudantium.</p>
+                <h2 class="section-title">About Me : </h2>
+                <p>A a highly motivated engineering graduate with a strong foundation in Python and JAVA, I am dedicated to pursuing a dynamic career that allows me to leverage my technical skills and passion for technology. My goal is to contribute to a forward-thinking organization, where I can continue to learn and grow, collaborate with a diverse team, and apply my problem-solving abilities and logical thinking to drive innovation and excellence in the field. With a background in web development and database management, I aspire to make a meaningful impact in the world of technology and programming.</p>
             </div>
+
+
             <div class="Projects section">
-                <p>My Projects : </p>
+                <h2 class="section-title">My Projects : </h2>
                 <ul>
                     <li>Project 1</li>
                     <li>Project 2</li>
@@ -37,9 +58,12 @@
                     <li>Project 4</li>
                 </ul>
             </div>
+
+
             <div class="ContactMe section">
-                <p>Contact Me</p>
+                <h2 class="section-title">Contact Me</h2>
             </div>
+
         </div>
     </body>
 </html>

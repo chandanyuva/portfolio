@@ -27,29 +27,52 @@ a {
 
 .section{
   max-width: 1200px;
+  width: 95vw;
+  min-width: 360px;
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 #content{
   display: grid;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 1fr;
   place-items: center;
 }
 
-nav{
-  width: 100vw;
+/* nav-bar start */
 
+nav{
+  max-width: 1200px;
+  width: 95vh;
+  min-width: 360px;
+  padding: 24px 40px;
+  margin-top: 4px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 40px;
+  transition: all 300ms ease-in-out;
+
 }
 nav ul{
   display: flex;
   gap: 1.2rem;
   list-style: none;
 }
-.logo{
+.my-logo{
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 40px;
+  border-radius: 50%;
+  
 }
 .menu-icon{
   display: none;
@@ -63,51 +86,35 @@ nav ul{
   }
 }
 
+.navbar.navbarDark {
+  /* background-color: #393b3cae; */
+  transition: all 300ms ease-in-out;
+  height: 8vh;
+  background-color:#5d60635c;
+  border-radius: 8px;
+}
+
+/* nav-bar end */
+
+/* hero-section start */
+
 .Hero{
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .my-pp{
-
+  border-radius: 50%;
 }
 .my-name{
     font-weight: 400;
     font-size: 4rem;
+    text-wrap: balance;
 }
 
-/* body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #000;
-  }
-
-  .loading-bar {
-    width: 300px;
-    height: 2px;
-    background-color: #888888;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .progress {
-    height: 100%;
-    background-color: #fff;
-    width: 120%; 
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
-    animation: progressAnimation 4s ease-in-out infinite;
-  }
-
-  @keyframes progressAnimation {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  } */
+.section-title{
+  margin-bottom: 20px ;
+  justify-self: left;
+}
