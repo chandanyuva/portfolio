@@ -226,6 +226,7 @@ mark {
   padding: 1rem;
   border: 1px solid black;
   border-radius: 12px;
+  transition: all 0.5s;
 }
 
 .scroller{
@@ -261,6 +262,17 @@ mark {
   }
 }
 
+.tag-list > li:hover{
+  border: 1px solid black;
+  transform: scale(1.05);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+}
+.tag-list > li:active {
+  transform: scale(0.95) ; 
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.103);
+  /* transform: scale(0.95) rotateZ(-1.7deg);  */
+}
+
 /* languages section end */
 
 
@@ -279,7 +291,7 @@ mark {
 .project-discription {
   width: 90%;
   height: 90%;
-  padding: 12px;
+  padding: 30px 20px;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -289,7 +301,7 @@ mark {
 
 
   border-radius: 16px;
-  text-align: center;
+  text-align: justify;
   cursor: pointer;
   transition: all 0.5s;
   align-items: center;
@@ -306,7 +318,9 @@ mark {
 }
 
 .project-discription:active {
-  transform: scale(0.95) rotateZ(-1.7deg);
+  transform: scale(0.95) ; 
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.103);
+  /* transform: scale(0.95) rotateZ(-1.7deg);  */
 }
 
 
