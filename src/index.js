@@ -1,3 +1,23 @@
+// nav bar settings start
+
+// add class navbarScroll on navbar scroll
+const header = document.querySelector('.navbar');
+
+window.onscroll = function() {
+    var top = window.scrollY;
+    if(top >=100) {
+        header.classList.add('navbarScroll');
+    }
+    else {
+        header.classList.remove('navbarScroll');
+    }
+}
+
+// nav bar settings end
+
+
+
+
 // languages infinate scrole animation start
 const scrollers = document.querySelectorAll(".scroller");
 
@@ -29,3 +49,4 @@ function addAnimation(){
 }
 
 // languages infinate scrole animation end
+
