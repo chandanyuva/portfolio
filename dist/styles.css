@@ -297,26 +297,29 @@ mark {
   align-items: center;
   backdrop-filter: blur(2px);
 }
-
-.project-list > a{
+/* 
+h4 > a , p > a{
   color: #5d6063;
 }
+h4 > a:hover , p > a:hover{
+  border-bottom: 1px solid black;
+} */
 
-.project-discription {
+.project-description {
   font-size: 20px;
   width: 90%;
   height: 90%;
   padding: 30px 20px;
   overflow-y: hidden;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 6px; */
   box-sizing: border-box;
   border: 1px solid white;
 
 
   border-radius: 16px;
-  text-align: justify;
+
   cursor: pointer;
   transition: all 0.5s;
   align-items: center;
@@ -326,20 +329,87 @@ mark {
   /* color: black; */
 }
 
-.project-discription:hover {
+.project-description{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15% 1fr 15%;
+  text-align: justify;
+}
+.project-description>h4{
+  grid-column: 1/3;
+  place-self: center;
+}
+.project-description>p{
+  font-size: 0.8rem;
+  grid-column: 1/3;
+}
+.project-description > a.top{
+  /* fix the font size  */
+  font-size: 16px;
+  place-self: center;
+  text-align: left;
+}
+.project-description > a{
+  font-size: 1rem;
+  place-self: center;
+}
+
+
+a{
+  color: #5d6063;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  /* text-transform: uppercase; */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+a:focus,
+a:hover {
+  color: rgb(30, 30, 30);
+  /* box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.156); */
+  /* border-radius: 8px; */
+  /* background-color: rgba(181, 181, 181, 0.038); */
+
+}
+
+a:focus:after,
+a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(30, 30, 30);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.project-description:hover {
   /* border: 1px solid black; */
   transform: scale(1.05);
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
 }
 
-.project-discription:active {
+.project-description:active {
   transform: scale(0.95) ; 
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.103);
   /* transform: scale(0.95) rotateZ(-1.7deg);  */
 }
 
 
-.project-list p:last-child{
+.project-list p:nth-child(2){
   text-wrap: pretty;
   font-size: 14px;
 }
