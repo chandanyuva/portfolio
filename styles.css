@@ -227,7 +227,6 @@ mark {
 /* languages section start */
 
 .tag-list{
-  
   margin:0;
   padding-inline:0 ;
   list-style: none;
@@ -297,13 +296,6 @@ mark {
   align-items: center;
   backdrop-filter: blur(2px);
 }
-/* 
-h4 > a , p > a{
-  color: #5d6063;
-}
-h4 > a:hover , p > a:hover{
-  border-bottom: 1px solid black;
-} */
 
 .project-description {
   font-size: 20px;
@@ -311,37 +303,31 @@ h4 > a:hover , p > a:hover{
   height: 90%;
   padding: 30px 20px;
   overflow-y: hidden;
-  /* display: flex;
-  flex-direction: column;
-  gap: 6px; */
   box-sizing: border-box;
   border: 1px solid white;
-
-
   border-radius: 16px;
-
   cursor: pointer;
   transition: all 0.5s;
   align-items: center;
   justify-content: center;
   user-select: none;
-  /* font-weight: bolder; */
-  /* color: black; */
-}
-
-.project-description{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 15% 1fr 15%;
   text-align: justify;
+  padding: 8px;
+  margin: 4px;
+  height: fit-content;
 }
 .project-description>h4{
   grid-column: 1/3;
   place-self: center;
 }
 .project-description>p{
+  margin: 4px;
   font-size: 0.8rem;
   grid-column: 1/3;
+  text-overflow: ellipsis;
 }
 .project-description > a.top{
   /* fix the font size  */
@@ -350,12 +336,15 @@ h4 > a:hover , p > a:hover{
   text-align: left;
 }
 .project-description > a{
+  margin: 4px 0;
   font-size: 1rem;
   place-self: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 
-a{
+.project-description a{
   color: #5d6063;
   cursor: pointer;
   position: relative;
@@ -367,8 +356,8 @@ a{
   transition-property: color;
 }
 
-a:focus,
-a:hover {
+.project-description a:focus,
+.project-description a:hover {
   color: rgb(30, 30, 30);
   /* box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.156); */
   /* border-radius: 8px; */
@@ -376,13 +365,13 @@ a:hover {
 
 }
 
-a:focus:after,
-a:hover:after {
+.project-description a:focus:after,
+.project-description a:hover:after {
   width: 100%;
   left: 0%;
 }
 
-a:after {
+.project-description a:after {
   content: "";
   pointer-events: none;
   bottom: -2px;
@@ -420,8 +409,26 @@ a:after {
 
 .ContactMe{
   display: flex;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-evenly;
+}
+
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  margin: 6px;
+}
+.contact-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  margin: 6px;
 }
 
 .socials{
@@ -472,7 +479,7 @@ a:after {
 
 .social-link:hover .BG {
   /* transform: rotate(35deg); */
-
+  border: none;
   transform-origin: bottom;
 }
 
@@ -480,6 +487,7 @@ a:after {
   transform: translate(0px, -8px) scale(1.1);
   background-color: rgba(156, 156, 156, 0.466);
   backdrop-filter: blur(4px);
+  border: none;
 }
 
 
